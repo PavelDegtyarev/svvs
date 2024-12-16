@@ -17,8 +17,12 @@ module.exports = [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
           depConstraints: [
             {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
+              sourceTag: 'scope:frontend-client',
+              onlyDependOnLibsWithTags: ['scope:frontend-client'],
+            },
+            {
+              sourceTag: 'scope:frontend-admin',
+              onlyDependOnLibsWithTags: ['scope:frontend-admin'],
             },
           ],
         },

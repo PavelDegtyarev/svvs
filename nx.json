@@ -74,7 +74,6 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
-
     }
   }
 }
