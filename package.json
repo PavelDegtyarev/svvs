@@ -2,7 +2,12 @@
   "name": "@svvs/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "db:start1": "copy .env docker-compose\\.env && cd docker-compose && docker-compose up -d",
+    "db:start": "docker-compose --env-file ./.env -f ./docker-compose/docker-compose.yml up -d",
+    "db:stop1": "cd docker-compose && docker-compose stop && del .env",
+    "db:stop": "docker-compose -f ./docker-compose/docker-compose.yml stop"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.0.0",
