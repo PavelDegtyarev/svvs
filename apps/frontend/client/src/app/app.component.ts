@@ -1,11 +1,9 @@
 import { Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import {MatCardModule} from '@angular/material/card'
-import {MatDividerModule} from '@angular/material/divider';
-import { MatAnchor, MatButton } from '@angular/material/button'
+import { UiComponentComponent } from '@svvs/ui-component'
 
 @Component({
-  imports: [RouterModule, MatCardModule, MatDividerModule, MatButton, MatAnchor],
+  imports: [RouterModule, UiComponentComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
