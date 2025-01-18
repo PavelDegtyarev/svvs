@@ -1,6 +1,6 @@
 {
   "name": "@svvs/source",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "db:start1": "copy .env docker-compose\\.env && cd docker-compose && docker-compose up -d",
