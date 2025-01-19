@@ -4,7 +4,11 @@
   "sourceRoot": "libs/shared/data-access/interfaces/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": [
+    "type:lib",
+    "scope:shared",
+    "lib-type:data-access"
+  ],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint"
