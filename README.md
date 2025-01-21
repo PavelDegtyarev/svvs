@@ -81,5 +81,8 @@ And join the Nx community:
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
+generate new module:
+nx g @nrwl/nest:module apps/backend/api/src/app/auth/auth
+
 ### tags:
 v0.1.0 init svvs workspace with backend-api and frontend client & admin app

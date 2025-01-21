@@ -1,0 +1,11 @@
+type Query {
+  login(username: String!, password: String!): SignInResponse
+  logout: Boolean
+}
+
+type SignInResponse {
+  accessToken: String
+  expiresIn: Int
+  id: Int
+}
+
