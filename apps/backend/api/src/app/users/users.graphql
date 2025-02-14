@@ -5,7 +5,7 @@ type Query {
 type User {
   id: Int,
   username: String
-  created: String
-  updated: String
+  created: Date
+  updated: Date
   email: String
 }
