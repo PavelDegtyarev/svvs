@@ -5,7 +5,7 @@ import { JwtService } from '@nestjs/jwt'
 import { UserService } from '../../users/services/user.service'
 import { PasswordService } from './password.service'
 import { UserEntity } from '../../users/entities/user.entity'
-import { environment } from '../../../environments/environments'
+import { environment } from '../../../environments/environment'
 
 @Injectable()
 export class AuthService {
