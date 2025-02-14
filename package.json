@@ -4,9 +4,12 @@
   "license": "MIT",
   "scripts": {
     "db:start1": "copy .env docker-compose\\.env && cd docker-compose && docker-compose up -d",
-    "db:start": "docker-compose --env-file ./.env -f ./docker-compose/docker-compose.yml up -d",
     "db:stop1": "cd docker-compose && docker-compose stop && del .env",
-    "db:stop": "docker-compose -f ./docker-compose/docker-compose.yml stop"
+    "db:start": "docker-compose --env-file ./.env -f ./docker-compose/docker-compose.yml up -d",
+    "db:stop": "docker-compose -f ./docker-compose/docker-compose.yml stop",
+    "backend:api:entities": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.entities.json",
+    "backend:api:migrations:run": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
+    "backend:api:migration:create": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:create -n"
   },
   "private": true,
   "dependencies": {
