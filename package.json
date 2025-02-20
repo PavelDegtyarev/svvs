@@ -7,9 +7,15 @@
     "db:stop1": "cd docker-compose && docker-compose stop && del .env",
     "db:start": "docker-compose --env-file ./.env -f ./docker-compose/docker-compose.yml up -d",
     "db:stop": "docker-compose -f ./docker-compose/docker-compose.yml stop",
-    "backend:api:entities": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.entities.json",
-    "backend:api:migrations:run": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
-    "backend:api:migration:create": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:create -n"
+    "typeorm": "npx typeorm-ts-node-commonjs",
+    "backend-api:entitiesOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.entities.json",
+    "backend-api:entities": "npx tsc --project apps/backend/api/tsconfig.entities.json",
+    "backend-api:migration:createOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:create -n",
+    "backend-api:migration:create": "typeorm migration:create apps/backend/api/src/migrations/mUser",
+    "backend-api:migrations:runOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
+    "backend-api:migrations:run": "npx typeorm-ts-node-commonjs migration:run -d ./dataSource.ts -t=false",
+    "backend-api:migrations:revertOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:revert",
+    "backend-api:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +31,7 @@
     "@angular/router": "~19.0.0",
     "@apollo/server": "^4.11.2",
     "@nestjs/apollo": "^12.2.2",
-    "@nestjs/common": "^10.0.2",
+    "@nestjs/common": "^10.4.15",
     "@nestjs/core": "^10.0.2",
     "@nestjs/graphql": "^12.2.2",
     "@nestjs/jwt": "^11.0.0",
@@ -45,7 +51,7 @@
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "pg": "^8.13.1",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.1.14",
     "rxjs": "~7.8.0",
     "typeorm": "^0.3.20",
     "zone.js": "~0.15.0"

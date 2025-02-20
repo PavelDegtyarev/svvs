@@ -1,27 +1,28 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { IUser } from '@svvs/interfaces'
+
+// import { IUser } from '@svvs/interfaces'
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import { IUser } from '../../../../../../../libs/shared/data-access/interfaces/src/lib/entities/users.interface'
 
 @Entity({
   name: 'users'
 })
 export class UserEntity implements IUser {
   @PrimaryGeneratedColumn()
-  id: number
+  id!: number
 
   @Column({length: 50, unique: true})
-  username: string
+  username!: string
 
   @CreateDateColumn()
-  created: string
+  created!: string
 
   @UpdateDateColumn()
-  updated: string
+  updated!: string
 
   @Column()
-  email: string
+  email!: string
 
   @Column()
-  password: string
+  password!: string
 
 }

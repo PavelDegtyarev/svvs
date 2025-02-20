@@ -17,7 +17,7 @@ export default {
 
   ],
   cli: {
-    'migrationsDir': 'migrations',
+    'migrationsDir': '/apps/backend/api/src/migrations',
     // where to put files when the script backend:api:migration:create is run
   },
 }

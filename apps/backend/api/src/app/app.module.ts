@@ -12,7 +12,7 @@ import { UserEntity } from './users/entities/user.entity'
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
+    TypeOrmModule.forRoot( {
       ...environment.connection,
       entities: [UserEntity],
     }),
