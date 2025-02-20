@@ -1,0 +1,17 @@
+{
+  "name": "interfaces",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/data-access/interfaces/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [
+    "type:lib",
+    "scope:shared",
+    "lib-type:data-access"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+schema:
+  - http://localhost:3000/graphql
+#      headers:
+#        Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOjEyLCJpYXQiOjE3NDAwNjg4NjEsImV4cCI6MTc0MDA4Mzg2MX0.BCXCiRbihs1S6-knp5z6h4g1bVIrgjQmPtl-megc2-w
+
+documents: '**/*.graphql'
+
+#{
+#  "name": "Backend API GraphQL Schema",
+#  "schemaPath": "schema.graphql",
+#  "projects": {
+#    "api": {
+#      "includes": [
+#        "./app/users/*.graphql",
+#        "./app/auth/*.graphql"
+#      ]
+#    }
+#  },
+#  "extensions": {
+#    "endpoints": {
+#      "Default GraphQL Endpoint": {
+#        "url": "http://localhost:3000/graphql",
+#        "headers": {
+#          "user-agent": "JS GraphQL"
+#          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOjEyLCJpYXQiOjE3NDAwNjg4NjEsImV4cCI6MTc0MDA4Mzg2MX0.BCXCiRbihs1S6-knp5z6h4g1bVIrgjQmPtl-megc2-w"
+#        },
+#        "introspect": false
+#      }
+#    }
+#  }
+#}
