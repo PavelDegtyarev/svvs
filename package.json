@@ -10,12 +10,12 @@
     "typeorm": "npx typeorm-ts-node-commonjs",
     "backend-api:entitiesOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.entities.json",
     "backend-api:entities": "npx tsc --project apps/backend/api/tsconfig.entities.json",
-    "backend-api:migration:createOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:create -n",
-    "backend-api:migration:create": "typeorm migration:create apps/backend/api/src/migrations/mUser",
-    "backend-api:migrations:runOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
-    "backend-api:migrations:run": "npx typeorm-ts-node-commonjs migration:run -d ./dataSource.ts -t=false",
-    "backend-api:migrations:revertOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:revert",
-    "backend-api:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts"
+    "db:migration:createOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:create -n",
+    "db:migration:create": "typeorm migration:create apps/backend/api/src/migrations/mUser",
+    "db:migrations:runOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
+    "db:migrations:run": "npx typeorm-ts-node-commonjs migration:run -d ./dataSource.ts -t=false",
+    "db:migrations:revertOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:revert",
+    "db:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts"
   },
   "private": true,
   "dependencies": {
