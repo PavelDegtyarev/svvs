@@ -15,7 +15,8 @@
     "db:migrations:runOrig": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && node_modules/.bin/ts-node node_modules/.bin/typeorm migration:run -t=false",
     "db:migrations:run": "npx typeorm-ts-node-commonjs migration:run -d ./dataSource.ts -t=false",
     "db:migrations:revertOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:revert",
-    "db:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts"
+    "db:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts",
+    "compodoc": "mkdir docs-temp && copy README.md docs-temp\\ && copy apps\\backend\\api\\docs\\README.md .\\ && npx compodoc -p apps\\backend\\api\\tsconfig.app.json --theme vagrant -d docs\\api\\ && del README.md && copy docs-temp\\README.md .\\ && del docs-temp\\README.md && rmdir docs-temp",
   },
   "private": true,
   "dependencies": {
@@ -64,6 +65,7 @@
     "@angular/compiler-cli": "~19.0.0",
     "@angular/language-service": "~19.0.0",
     "@angular/localize": "~19.0.0",
+    "@compodoc/compodoc": "^1.1.26",
     "@eslint/js": "^9.8.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
