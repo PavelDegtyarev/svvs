@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+//    "forceConsistentCasingInFileNames": true
+  },
+//  "include": ["apps/**/*", "libs/**/*"]
+}
