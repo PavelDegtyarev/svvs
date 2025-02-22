@@ -16,7 +16,11 @@
     "db:migrations:run": "npx typeorm-ts-node-commonjs migration:run -d ./dataSource.ts -t=false",
     "db:migrations:revertOrig": "node_modules/.bin/ts-node node_modules/.bin/typeorm migration:revert",
     "db:migrations:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./dataSource.ts",
-    "compodoc": "mkdir docs-temp && copy README.md docs-temp\\ && copy apps\\backend\\api\\docs\\README.md .\\ && npx compodoc -p apps\\backend\\api\\tsconfig.app.json --theme vagrant -d docs\\api\\ && del README.md && copy docs-temp\\README.md .\\ && del docs-temp\\README.md && rmdir docs-temp",
+    "compodoc-backend-api": "mkdir docs-temp && copy README.md docs-temp\\ && copy apps\\backend\\api\\docs\\README.md .\\ && npx compodoc -p apps\\backend\\api\\tsconfig.app.json --theme vagrant -d docs\\api\\ && del README.md && copy docs-temp\\README.md .\\ && del docs-temp\\README.md && rmdir docs-temp",
+    "compodoc-frontend-admin": "mkdir docs-temp && copy README.md docs-temp\\ && copy apps\\frontend\\admin\\docs\\README.md .\\ && npx compodoc -p apps\\frontend\\admin\\tsconfig.doc.json --theme vagrant -d docs\\admin\\ && del README.md && copy docs-temp\\README.md .\\ && del docs-temp\\README.md && rmdir docs-temp",
+    "compodoc-frontend-client": "mkdir docs-temp && copy README.md docs-temp\\ && copy apps\\frontend\\client\\docs\\README.md .\\ && npx compodoc -p apps\\frontend\\client\\tsconfig.doc.json --theme vagrant -d docs\\client\\ && del README.md && copy docs-temp\\README.md .\\ && del docs-temp\\README.md && rmdir docs-temp",
+    "compodoc": "npm run compodoc-backend-api && npm run compodoc-frontend-client && npm run compodoc-frontend-admin"
+
   },
   "private": true,
   "dependencies": {
